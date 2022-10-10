@@ -1,55 +1,74 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:proy_productos_v1/features/product/presentation/pages/agregar_productos.dart';
 import '../../../../routes/routes.dart';
 import '../../../../routes/pages.dart';
 import 'package:go_router/go_router.dart';
+
 class Home extends ConsumerWidget {
   const Home({Key? key}) : super(key: key);
- @override
+  // ignore: non_constant_identifier_names
+  final String TAG = "log";
+  @override
   Widget build(BuildContext context, WidgetRef ref) {
-    
     var medida = MediaQuery.of(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text("Gestión de Productos"),
+        title: const Text("Gestión de Productos"),
+        backgroundColor: Theme.of(context).colorScheme.primary,
       ),
-      drawer: Drawer(),
+      drawer: const Drawer(),
       body: Center(
-        child: Container(
-          child: Column(
-            children: [
-              SizedBox(height: 20),
-              Container(
-                width: medida.size.width * 0.40,
-                child: ElevatedButton(
-                  child: Text(
-                    "Formulario",
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
-                  ),
-                  //onPressed: () => context.go('/homepage'),
-                  onPressed: () {
-                    context.goNamed(AppRoutes.HOMEPAGE);
-                   
-                  },
+        child: Column(
+          children: [
+            const SizedBox(height: 20),
+            SizedBox(
+              width: medida.size.width * 0.40,
+              child: ElevatedButton(
+                child: const Text(
+                  "Formulario",
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
                 ),
+                //onPressed: () => context.go('/homepage'),
+                onPressed: () {
+                  context.push(AppRoutes.AGREGARPRODUCTO);
+                },
               ),
-              SizedBox(height: 20),
-              Container(
-                width: medida.size.width * 0.40,
-                child: ElevatedButton(
-                  child: Text(
-                    "Lista de Items",
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
-                  ),
-                  onPressed: () {
-                    //Get.offAllNamed(AppRoutes.LISTA_TRABAJO);
-                  },
+            ),
+            const SizedBox(height: 20),
+            SizedBox(
+              width: medida.size.width * 0.40,
+              child: ElevatedButton(
+                child: const Text(
+                  "Lista de Items",
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
                 ),
+                onPressed: () {
+                  //Get.offAllNamed(AppRoutes.LISTA_TRABAJO);
+                  context.push(AppRoutes.HOMEPAGE);
+                  log("${TAG}se dirigira a homepage");
+                },
               ),
-              SizedBox(height: 20),
-            ],
-          ),
+            ),
+            const SizedBox(height: 20),
+            SizedBox(
+              width: medida.size.width * 0.40,
+              child: ElevatedButton(
+                child: const Text(
+                  "Eliminar",
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                ),
+                onPressed: () {
+                  context.push(AppRoutes.ELIMINARPRODUCTOS);
+                  //Get.offAllNamed(AppRoutes.LISTA_TRABAJO);
+                  //context.push(StatefulBottomSheet())
+                },
+              ),
+            ),
+          ],
         ),
       ),
     );

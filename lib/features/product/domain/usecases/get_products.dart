@@ -1,5 +1,3 @@
-
-
 import 'package:proy_productos_v1/features/product/domain/entities/product.dart';
 import 'package:proy_productos_v1/features/product/domain/repository/iproduct_repository.dart';
 

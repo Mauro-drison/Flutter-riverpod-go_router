@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
         routeInformationProvider: router.routeInformationProvider,
         routeInformationParser: router.routeInformationParser,
         routerDelegate: router.routerDelegate
+
         /*
         theme: ThemeData(
             colorScheme: ColorScheme.fromSwatch(
