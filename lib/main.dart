@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:proy_productos_v1/core/routes/pages.dart';
 import 'package:proy_productos_v1/features/product/presentation/pages/home.dart';
 import 'package:proy_productos_v1/features/product/presentation/pages/homepage.dart';
-import 'routes/pages.dart';
+
 void main() {
   runApp(const ProviderScope(child: MyApp()));
 }

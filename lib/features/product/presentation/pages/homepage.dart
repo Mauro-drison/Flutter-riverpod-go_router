@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:proy_productos_v1/core/routes/routes.dart';
 import 'package:proy_productos_v1/provider_dependency.dart';
-import '../../../../routes/routes.dart';
+
 import 'package:go_router/go_router.dart';
 
 import 'agregar_productos.dart';

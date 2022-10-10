@@ -3,9 +3,9 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:proy_productos_v1/core/routes/routes.dart';
 import 'package:proy_productos_v1/features/product/presentation/pages/agregar_productos.dart';
-import '../../../../routes/routes.dart';
-import '../../../../routes/pages.dart';
+
 import 'package:go_router/go_router.dart';
 
 class Home extends ConsumerWidget {

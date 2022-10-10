@@ -2,12 +2,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:proy_productos_v1/features/product/data/model/product_model.dart';
 import 'package:proy_productos_v1/features/product/presentation/pages/agregar_productos.dart';
 import 'package:proy_productos_v1/features/product/presentation/pages/eliminar_productos.dart';
 import 'package:proy_productos_v1/features/product/presentation/pages/home.dart';
 import 'package:proy_productos_v1/features/product/presentation/pages/homepage.dart';
 import 'package:proy_productos_v1/features/product/presentation/pages/modificar_productos.dart';
-import '../features/product/data/model/product_model.dart';
+
 import 'routes.dart';
 
 final GoRouter router = GoRouter(
